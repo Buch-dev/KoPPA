@@ -1,0 +1,54 @@
+<template>
+  <form class="mt-6">
+    <div class="flex gap-x-1 md:justify-end">
+      <input
+        type="text"
+        aria-label="search"
+        class="border-jobListingsBorderColor border-solid border-[1px] rounded-[100px] w-2/5 px-2 py-1 md:w-[185px] md:rounded-[10px] md:px-4 md:py-2"
+      />
+      <input
+        type="text"
+        aria-label="search"
+        class="border-jobListingsBorderColor border-solid border-[1px] rounded-[100px] w-2/5 px-2 py-1 md:w-[185px] md:rounded-[10px] md:px-4 md:py-2"
+      />
+      <button
+        class="bg-signUpCorperBtn flex items-center justify-center max-w-[3.5rem] rounded-[10px] w-1/5"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.92302 9.36998C1.41302 9.16498 1.41902 8.85998 1.95702 8.68098L21.043 2.31898C21.572 2.14298 21.875 2.43898 21.727 2.95698L16.273 22.043C16.123 22.572 15.798 22.596 15.556 22.113L11 13L1.92302 9.36998ZM6.81302 9.16998L12.449 11.425L15.489 17.507L19.035 5.09698L6.81202 9.16998H6.81302Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
+  <div class="mt-14 space-y-5">
+    <JobListingsCard v-for="post in latestJobs" :key="post.id" :post="post" />
+  </div>
+  <div class="mt-7 flex justify-center">
+    <button class="bg-signUpCorperBtn text-white px-16 py-4 rounded-[10px]">
+      Show More
+    </button>
+  </div>
+</template>
+
+<script>
+import JobListingsCard from "./JobListingsCard.vue";
+
+import { latestJobs } from "@/utils/jobs";
+
+export default {
+  name: "JobListingsLatest",
+  components: { JobListingsCard },
+  setup() {
+    return { latestJobs };
+  },
+};
+</script>
