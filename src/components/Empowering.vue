@@ -1,7 +1,7 @@
 <template>
   <div class="mt-20 md:bg-empowerBackgroundColor">
     <div
-      class="container flex flex-col gap-24 items-center md:flex-row-reverse md:gap-0"
+      class="md:container flex flex-col gap-24 items-center md:flex-row-reverse md:gap-0"
     >
       <img
         :src="require(`../assets/img/${nyscLogo}.png`)"

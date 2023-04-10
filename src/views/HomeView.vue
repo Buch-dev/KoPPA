@@ -1,7 +1,7 @@
 <template>
-  <div class="landing">
-    <Navigation />
-    <Banner />
+  <div class="home">
+    <Nav />
+    <HomeBanner />
     <LatestJobs />
     <Empowering />
     <Companies />
@@ -13,20 +13,26 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Navigation from "@/components/Navigation.vue";
-import Banner from "@/components/Banner.vue";
+import Nav from '@/components/Nav.vue'
+import HomeBanner from "@/components/HomeBanner.vue";
 import LatestJobs from "@/components/LatestJobs.vue";
 import Empowering from "@/components/Empowering.vue";
 import Companies from "@/components/Companies.vue";
 import WhyKoppa from "@/components/WhyKoppa.vue";
-import ContactUs from '@/components/ContactUs.vue'
+import ContactUs from "@/components/ContactUs.vue";
 
 export default {
-  name: "LandingPage",
-  components: { Navigation, Banner, LatestJobs, Empowering, Companies, WhyKoppa, ContactUs },
-  data() {
-    return {};
+  name: "HomeView",
+  components: {
+    Nav,
+    HomeBanner,
+    LatestJobs,
+    Empowering,
+    Companies,
+    WhyKoppa,
+    ContactUs,
   },
 };
 </script>
+
+<style scoped></style>

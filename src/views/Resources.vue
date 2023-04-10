@@ -1,5 +1,6 @@
 <template>
   <section>
+    <Nav />
     <div class="container px-[1.875rem]">
       <div
         class="mt-10 flex flex-col items-center text-center md:flex-row-reverse md:text-left md:justify-between"
@@ -66,3 +67,11 @@
     </div>
   </section>
 </template>
+
+<script>
+import Nav from '@/components/Nav.vue'
+
+export default {
+  components: {Nav}
+}
+</script>

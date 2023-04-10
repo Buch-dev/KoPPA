@@ -1,5 +1,6 @@
 <template>
   <section>
+    <Nav />
     <h1
       class="text-center text-xl text-jobListingsColor leading-9 font-bold mt-10 md:mt-40 md:text-3xl"
     >
@@ -71,6 +72,7 @@
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue'
 import JobListingsCardVue from "@/components/JobListingsCard.vue";
 import JobListingsRecommended from "@/components/JobListingsRecommended.vue";
 import JobListingsLatest from "@/components/JobListingsLatest.vue";
@@ -80,6 +82,7 @@ import { companiesMobile, companiesDesktop } from "@/utils/jobs";
 export default {
   name: "JobListings",
   components: {
+    Nav,
     JobListingsCardVue,
     JobListingsRecommended,
     JobListingsLatest,
