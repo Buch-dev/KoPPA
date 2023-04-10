@@ -3,3 +3,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  [data-state-desktop="true"] {
+    @apply hidden md:block;
+  }
+}
