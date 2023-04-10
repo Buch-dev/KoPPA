@@ -11,7 +11,8 @@
           {{ btnMsg }}
         </button>
         <div class="close-btn h-full w-8">
-          <img src="../assets/icons/close-banner-mobile.png" alt="" class="md:w-full" />
+          <img src="../assets/icons/close-banner-mobile.png" alt="" class="md:w-full md:hidden cursor-pointer" />
+          <img src="../assets/icons/refer-close-desktop.png" alt="" class="hidden md:block cursor-pointer">
         </div>
       </div>
     </div>

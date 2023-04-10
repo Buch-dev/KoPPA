@@ -5,7 +5,7 @@
       Follow and Interate with companies
     </p>
     <router-link to="#" class="font-sans">See all Companies</router-link>
-    <div class="grid grid-cols-2 gap-4 mt-5">
+    <div class="grid grid-cols-2 gap-4 mt-5 md:grid-cols-4">
       <CompaniesComponent
         :company="company"
         v-for="(company, index) in CompaniesData"

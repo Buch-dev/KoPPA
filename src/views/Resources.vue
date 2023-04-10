@@ -1,5 +1,6 @@
 <template>
   <section>
+    <Nav />
     <ResourcesHero />
   </section>
   <section class="bg-[#21513b99] md:bg-empowerBackgroundColor">
@@ -19,6 +20,7 @@ import ResourcesDownload from "@/components/ResourcesDownload.vue";
 import ResourcesStates from "@/components/ResourcesStates.vue";
 import ResourcesCertificate from "@/components/ResourcesCertificate.vue";
 
+import Nav from "@/components/Nav.vue";
 import StateCard from "@/components/StateCard.vue";
 
 export default {
@@ -29,6 +31,7 @@ export default {
     ResourcesStates,
     ResourcesCertificate,
     StateCard,
+    Nav,
   },
 };
 </script>

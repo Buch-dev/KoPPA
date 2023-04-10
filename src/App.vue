@@ -1,18 +1,14 @@
 <template>
-  <Navigation />
-  <Refer />
   <router-view />
   <Footer />
 </template>
 
 <script>
-import Navigation from "@/components/Navigation.vue";
-import Refer from "@/components/Refer.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
-  components: { Navigation, Refer, Footer },
+  components: {Footer },
 };
 </script>
 
