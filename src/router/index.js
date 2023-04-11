@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPage from "../views/LandingPage.vue";
-import Resources from "../views/Resources.vue";
+import AboutView from "../views/AboutView.vue";
 
 const routes = [
   {
@@ -16,6 +16,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/HomeView"),
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: AboutView,
   },
   {
     path: "/job-listings",

@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
+import Nav from "@/components/Nav.vue";
 import JobListingsCardVue from "@/components/JobListingsCard.vue";
 import JobListingsRecommended from "@/components/JobListingsRecommended.vue";
 import JobListingsLatest from "@/components/JobListingsLatest.vue";

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-jobCardBackgroundColor text-bannerBlendColor px-6 pt-4 pb-2 md:pt-10 md:pb-6 md:px-11 rounded-[20px] flex flex-col items-center justify-center text-center"
+    class="bg-jobCardBackgroundColor text-bannerBlendColor px-2 pt-4 pb-2 md:pt-10 md:pb-6 md:px-11 rounded-[20px] flex flex-col items-center justify-center text-center"
   >
     <div
       class="w-14 h-[4.435rem] bg-white flex items-center justify-center md:w-32 md:h-24"
