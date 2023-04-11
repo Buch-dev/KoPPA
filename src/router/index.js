@@ -32,6 +32,11 @@ const routes = [
     name: "Resources",
     component: () => import("../views/Resources.vue"),
   },
+  {
+    path: "/create-corper-acct",
+    name: "CreateCorperAcct",
+    component: () => import("../views/CreateCorperAcct.vue"),
+  },
 ];
 
 const router = createRouter({

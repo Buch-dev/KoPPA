@@ -22,4 +22,8 @@ export default {
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+body.menu-open {
+    @apply bg-black bg-opacity-50;
+}
 </style>
