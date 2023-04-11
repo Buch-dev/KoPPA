@@ -7,12 +7,11 @@
         <img
           src="../assets/img/koPPA-logo.png"
           alt="logo"
-          class="w-[181.21px]"
+          class="w-[119.15px] md:w-[181.21px]"
         />
       </router-link>
     </div>
     <div class="menu flex justify-between items-center gap-8">
-      <!-- <input type="search" name="" id="search" class="border"> -->
       <transition
         enter-active-class="duration-500 ease-out"
         leave-active-class="duration-500 ease-in"
@@ -128,8 +127,6 @@ export default {
 };
 </script>
 
-<style scoped>
-body.menu-open {
-    @apply bg-black bg-opacity-50;
-}
+<style>
+
 </style>

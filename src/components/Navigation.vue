@@ -9,11 +9,13 @@
       <!-- <input type="search" name="" id="search" class="border"> -->
       <img src="../assets/icons/search-line.png" alt="search" class="w-8" />
       <img src="../assets/icons/menu-bar.png" alt="menu" class="md:hidden" />
-      <button
+      <router-link :to="{name: 'CreateCorperAcct'}">
+        <button
         class="hidden md:block rounded border border-signUpCorperBtn text-signUpCorperBtn py-4 px-6"
       >
         SIGN IN
       </button>
+      </router-link>
     </div>
   </nav>
   <Refer />
