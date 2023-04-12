@@ -37,6 +37,11 @@ const routes = [
     name: "CreateCorperAcct",
     component: () => import("../views/CreateCorperAcct.vue"),
   },
+  {
+    path: "/user",
+    name: "User",
+    component: () => import("../views/UserProfile.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -1,0 +1,27 @@
+<template>
+  <div
+    class="hidden md:flex md:flex-col md:w-1/3 bg-[#e1efec] px-5 pt-14 space-y-5"
+  >
+    <div class="bg-white rounded-medium p-[3.125rem]">
+      <ul class="space-y-8">
+        <li>Profile</li>
+        <li>Notifications</li>
+        <li>Settings</li>
+        <li>Verification</li>
+        <li>Change Password</li>
+        <li>Referral</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-medium p-[3.125rem]">
+      <ul class="space-y-8">
+        <li>log out</li>
+        <li>Delete Account</li>
+      </ul>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "SideProfile",
+};
+</script>
