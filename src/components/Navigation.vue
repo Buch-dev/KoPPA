@@ -21,6 +21,9 @@
           SIGN IN
         </button>
       </router-link>
+      <div class="text-xl font-sans font-light hidden md:block">
+        <router-link :to="{ name: 'home' }">Landing Page (For now)</router-link>
+      </div>
     </div>
     <!-- Mobile nav -->
     <transition
@@ -68,7 +71,9 @@
             <router-link to="#">Referral</router-link>
           </li>
           <li class="text-xl font-sans font-light">
-            <router-link :to="{name: 'home'}">Landing Page (For now)</router-link>
+            <router-link :to="{ name: 'home' }"
+              >Landing Page (For now)</router-link
+            >
           </li>
         </ul>
         <hr class="border mt-[10px]" />
