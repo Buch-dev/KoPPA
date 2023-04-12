@@ -26,6 +26,9 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      borderRadius: {
+        medium: "1.25rem",
+      },
     },
   },
   plugins: [],
