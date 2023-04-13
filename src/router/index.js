@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPage from "../views/LandingPage.vue";
 import AboutView from "../views/AboutView.vue";
+import SignInCorper from "@/views/SignInCorper.vue";
+import SignInCompany from "@/views/SignInCompany.vue";
 
 const routes = [
   {
@@ -46,6 +48,16 @@ const routes = [
     path: "/company",
     name: "Company",
     component: () => import("../views/CompanyProfile.vue"),
+  },
+  {
+    path: "/signin-corper",
+    name: "signin-corper",
+    component: SignInCorper,
+  },
+  {
+    path: "/signin-company",
+    name: "signin-company",
+    component: SignInCompany,
   },
 ];
 
