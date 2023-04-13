@@ -1,32 +1,40 @@
 <template>
   <nav
-    class="container flex w-full justify-between py-5 shadow-md md:shadow-none"
+    class="container flex w-full justify-between py-5 shadow-md md:shadow-none items-center"
   >
     <div class="logo">
-      <img src="../assets/img/koPPA-logo.png" alt="logo" class="w-32" />
+      <img
+        src="../assets/img/koPPA-logo.png"
+        alt="logo"
+        class="w-24 mb-3 md:w-32"
+      />
     </div>
     <div class="menu flex justify-between items-center gap-8">
       <!-- <input type="search" name="" id="search" class="border"> -->
-      <img src="../assets/icons/search-line.png" alt="search" class="w-8" />
       <img
+        src="../assets/icons/search-line.png"
+        alt="search"
+        class="w-6 md:w-8 object-contain"
+      />
+      <!-- <img
         src="../assets/icons/menu-bar.png"
         alt="menu"
         class="md:hidden cursor-pointer"
         @click="toggleMobileNav"
-      />
-      <router-link :to="{ name: 'CreateCorperAcct' }">
+      /> -->
+      <router-link :to="{ name: 'signin-corper' }">
         <button
-          class="hidden md:block rounded border border-signUpCorperBtn text-signUpCorperBtn py-4 px-6"
+          class="md:block rounded border border-signUpCorperBtn text-signUpCorperBtn py-2 px-6 md:py-4 md:px-6 text-sm md:text-lg"
         >
           SIGN IN
         </button>
       </router-link>
-      <div class="text-xl font-sans font-light hidden md:block">
+      <!-- <div class="text-xl font-sans font-light md:block">
         <router-link :to="{ name: 'home' }">Landing Page (For now)</router-link>
-      </div>
+      </div> -->
     </div>
     <!-- Mobile nav -->
-    <transition
+    <!-- <transition
       enter-active-class="transition-opacity duration-500"
       leave-active-class="transition-opacity duration-500"
       enter-class="opacity-0"
@@ -86,7 +94,7 @@
           </li>
         </ul>
       </div>
-    </transition>
+    </transition> -->
   </nav>
   <Refer />
 </template>
