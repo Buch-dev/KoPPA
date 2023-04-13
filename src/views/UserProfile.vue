@@ -6,41 +6,7 @@
     <div class="pt-14 pb-[7.5rem] md:w-2/3">
       <section>
         <div class="container px-[1.875rem] mt-[7.5rem] md:mt-0">
-          <div>
-            <div class="flex flex-col items-center">
-              <img
-                src="../assets/img/corper-profile-pic-desktop.png"
-                class="w-36 h-40 rounded-full"
-              />
-
-              <div class="relative">
-                <h1 class="mt-14 text-blackColor text-3xl">John Edwards</h1>
-                <img
-                  src="../assets/icons/pen.png"
-                  alt=""
-                  class="w-3 h-3 absolute bottom-3 -right-10"
-                />
-              </div>
-              <div class="flex mt-3 gap-x-10 items-center">
-                <div class="flex gap-1 items-center">
-                  <img
-                    src="../assets/icons/koppa-bag.png"
-                    alt=""
-                    class="w-5 h-6 object-contain"
-                  />
-                  <small class="text-[0.625rem]">Lab Technicians</small>
-                </div>
-                <div class="flex gap-1 items-center">
-                  <img
-                    src="../assets/icons/like.png"
-                    alt=""
-                    class="w-[1.375rem] h-5 object-contain"
-                  />
-                  <small class="text-[0.625rem]">20</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProfileHeader imgUrl="corperProfileDesktop" />
         </div>
       </section>
 
@@ -187,8 +153,9 @@
 <script>
 import Nav from "@/components/Nav.vue";
 import SideProfile from "@/components/SideProfile.vue";
+import ProfileHeader from "@/components/ProfileHeader.vue";
 
 export default {
-  components: { Nav, SideProfile },
+  components: { Nav, SideProfile, ProfileHeader },
 };
 </script>
