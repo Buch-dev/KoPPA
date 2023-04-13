@@ -57,13 +57,15 @@
       <div>
         <button
           class="py-4 bg-signUpCorperBtn text-white w-full mt-10 rounded-[0.625rem]"
+          @click="goToAccount"
+          type="button"
         >
           Sign In
         </button>
       </div>
       <p class="text-sm flex flex-col md:flex-row gap-2">
         <span> {{ message }} </span>
-        <router-link :to="`/${path}`" class="text-signUpCorperBtn"
+        <router-link :to="`/${pathName}`" class="text-signUpCorperBtn"
           >Sign In</router-link
         >
       </p>
@@ -73,15 +75,25 @@
 
 <script>
 import router from "@/router";
+
 export default {
   name: "SignIn",
-  props: ["message", "path"],
-  setup() {
+  props: ["message", "pathName"],
+  setup(props) {
     const goBack = () => {
       router.back();
     };
 
-    return { goBack };
+    const goToAccount = () => {
+      console.log(props.pathName);
+      if (props.pathName === "signin-corper") {
+        router.push("/company");
+        return;
+      }
+      router.push("/home");
+    };
+
+    return { goBack, goToAccount };
   },
 };
 </script>

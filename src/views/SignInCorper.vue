@@ -2,7 +2,7 @@
   <section>
     <SignIn
       message="Not a corper? sign in as an employer"
-      path="signin-company"
+      pathName="signin-company"
     />
   </section>
 </template>
