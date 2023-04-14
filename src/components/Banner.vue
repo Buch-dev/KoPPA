@@ -3,7 +3,7 @@
     class="banner bg-cover bg-center bg-no-repeat bg-[url('../assets/img/social-image-nysc.png')] bg-blend-overlay bg-bannerBlendColor md:bg-none md:bg-transparent md:mt-16"
   >
     <div
-      class="container text-center flex justify-center items-center md:text-left"
+      class="container px-[1.875rem] text-center flex justify-center items-center md:text-left"
     >
       <div class="banner-text md:w-2/5">
         <h2
@@ -21,13 +21,13 @@
         >
           <router-link
             to="/create-corper-acct"
-            class="bg-signUpCorperBtn text-white rounded-xl py-3 px-6 w-fit md:py-4 md:font-medium md:text-sm"
+            class="bg-signUpCorperBtn h-16 text-white rounded-xl py-3 px-6 w-fit md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center"
           >
             Sign Up as a Corper
           </router-link>
           <router-link
             to="/create-company-acct"
-            class="bg-transparent border border-white text-white rounded-xl py-3 px-6 w-fit md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium md:text-sm"
+            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-fit md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm flex items-center justify-center"
           >
             Sign Up as an Employer
           </router-link>
