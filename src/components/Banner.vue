@@ -27,7 +27,7 @@
           </router-link>
           <router-link
             to="/create-company-acct"
-            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-fit md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm flex items-center justify-center"
+            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-fit md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center"
           >
             Sign Up as an Employer
           </router-link>
