@@ -1,18 +1,24 @@
 <template>
   <div class="bg-primaryYellow">
-    <div
-      class="container flex justify-between items-center py-4"
-    >
-      <p class="w-1/2 font-medium text-sm">{{ msg }}</p>
-      <div class="btn-close flex justify-between w-1/2">
+    <div class="container px-[1.875rem] flex justify-between items-center py-2">
+      <p class="w-1/2 font-medium text-xs md:text-sm">{{ msg }}</p>
+      <div class="btn-close flex justify-between gap-x-3 items-center w-1/2">
         <button
-          class="bg-referBtn rounded-lg py-1 px-3 ml-5 w-28 font-medium text-sm md:w-36 md:text-base md:ml-40"
+          class="bg-referBtn rounded-lg py-2 md:px-3 ml-5 w-28 font-medium text-xs md:w-36 md:text-base md:ml-40"
         >
           {{ btnMsg }}
         </button>
         <div class="close-btn h-full w-8">
-          <img src="../assets/icons/close-banner-mobile.png" alt="" class="md:w-full md:hidden cursor-pointer" />
-          <img src="../assets/icons/refer-close-desktop.png" alt="" class="hidden md:block cursor-pointer">
+          <img
+            src="../assets/icons/close-banner-mobile.png"
+            alt=""
+            class="md:w-full md:hidden cursor-pointer"
+          />
+          <img
+            src="../assets/icons/refer-close-desktop.png"
+            alt=""
+            class="hidden md:block cursor-pointer"
+          />
         </div>
       </div>
     </div>

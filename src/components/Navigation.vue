@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container flex w-full justify-between py-5 shadow-md md:shadow-none items-center"
+    class="container px-[1.875rem] flex w-full justify-between py-5 shadow-md md:shadow-none items-center"
   >
     <div class="logo">
       <img
