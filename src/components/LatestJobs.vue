@@ -1,16 +1,20 @@
 <template>
-  <div class="container">
+  <div class="container px-[1.875rem]">
     <h3 class="text-signUpCorperBtn font-bold text-xl pt-20">{{ title }}</h3>
-    <JobCard :post="post" v-for="(post, index) in latestJobsCards" :key="index" />
+    <JobCard
+      :post="post"
+      v-for="(post, index) in latestJobsCards"
+      :key="index"
+    />
   </div>
 </template>
 
 <script>
-import JobCard from '@/components/JobCard.vue'
+import JobCard from "@/components/JobCard.vue";
 
 export default {
   name: "LatestJobs",
-  components: {JobCard},
+  components: { JobCard },
   data() {
     return {
       title: "Latest Jobs",
