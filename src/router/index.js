@@ -3,6 +3,7 @@ import LandingPage from "../views/LandingPage.vue";
 import AboutView from "../views/AboutView.vue";
 import SignInCorper from "@/views/SignInCorper.vue";
 import SignInCompany from "@/views/SignInCompany.vue";
+import CreateCompanyAcct from "@/views/CreateCompanyAcct.vue";
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/create-corper-acct",
     name: "CreateCorperAcct",
     component: () => import("../views/CreateCorperAcct.vue"),
+  },
+  {
+    path: "/create-company-acct",
+    name: "create-company-acct",
+    component: CreateCompanyAcct,
   },
   {
     path: "/user",
