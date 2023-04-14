@@ -1,11 +1,15 @@
 <template>
-  <div class="container mt-32">
+  <div class="container px-[1.875rem] mt-32">
     <h5 class="font-semibold text-xl">Accredidated Company</h5>
     <p class="font-sans font-medium mt-5 mb-8">
       Follow and Interate with companies
     </p>
-    <router-link to="#" class="font-sans">See all Companies</router-link>
-    <div class="grid grid-cols-2 gap-4 mt-5 md:grid-cols-4">
+    <router-link to="#" class="font-sans md:hidden"
+      >See all Companies</router-link
+    >
+    <div
+      class="grid grid-cols-2 gap-x-5 gap-y-10 mt-5 md:grid-cols-4 md:gap-y-11"
+    >
       <CompaniesComponent
         :company="company"
         v-for="(company, index) in CompaniesData"

@@ -8,4 +8,12 @@
   [data-state-desktop="true"] {
     @apply hidden md:block;
   }
+
+  .mobileCompany {
+    @apply hidden md:flex md:flex-col;
+  }
+
+  /* [data-mobile-company="false"] {
+    @apply hidden md:flex;
+  } */
 }
