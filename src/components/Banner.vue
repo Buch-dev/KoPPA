@@ -17,17 +17,17 @@
           {{ text }}
         </p>
         <div
-          class="btns flex justify-evenly gap-2 mt-36 mb-20 md:justify-start md:gap-6 md:mt-16 md:mb-0"
+          class="btns flex gap-x-4 mt-36 mb-20 md:justify-start md:gap-6 md:mt-16 md:mb-0"
         >
           <router-link
             to="/create-corper-acct"
-            class="bg-signUpCorperBtn h-16 text-white rounded-xl py-3 px-6 w-fit md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center"
+            class="bg-signUpCorperBtn border h-16 border-signUpCorperBtn text-white rounded-xl py-3 px-6 w-1/2 md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center hover:bg-white hover:text-signUpCorperBtn transition-colors duration-300"
           >
             Sign Up as a Corper
           </router-link>
           <router-link
             to="/create-company-acct"
-            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-fit md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center"
+            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-1/2 md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center hover:bg-signUpCorperBtn hover:text-white transition-colors duration-300"
           >
             Sign Up as an Employer
           </router-link>
