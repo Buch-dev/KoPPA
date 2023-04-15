@@ -31,7 +31,7 @@
       <img
         src="../assets/icons/menu-bar.png"
         alt="menu"
-        class="md:hidden cursor-pointer"
+        class="md:hidden cursor-pointer w-7 h-5 object-cover"
         @click="toggleMobileNav"
       />
       <ul class="hidden md:flex gap-10 items-center">
@@ -118,9 +118,9 @@ export default {
     toggleMobileNav() {
       this.isOpen = !this.isOpen;
       if (this.isOpen) {
-        document.body.classList.add('menu-open')
+        document.body.classList.add("menu-open");
       } else {
-        document.body.classList.remove('menu-open')
+        document.body.classList.remove("menu-open");
       }
     },
   },
@@ -134,6 +134,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
