@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-4xl relative">
+  <div class="container px-[1.75rem] max-w-4xl relative">
     <button class="absolute top-3" @click="goBack">
       <svg
         width="17"
@@ -16,9 +16,13 @@
     </button>
 
     <div class="text-center mt-[1.875rem]">
-      <h1 class="text-5xl">
+      <h1 class="text-3xl md:text-5xl">
         <span class="text-bannerBlendColor leading-6">Welcome</span><br />
-        <span class="text-signUpCorperBtn leading-6">To KoPPA</span>
+        <span class="text-signUpCorperBtn leading-6"
+          >To
+          <span v-if="pathName !== 'signin-company'">Employer's</span>
+          KoPPA</span
+        >
       </h1>
       <p class="text-bannerBlendColor text-base mt-[0.625rem]">
         Login to your account to browse the site
@@ -34,7 +38,7 @@
         <input
           id="email"
           name="email"
-          class="py-3 px-4 w-full border-[0.5px] border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
+          class="py-3 px-4 w-full border-[0.5px] focus:border-signUpCorperBtn border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
         />
       </div>
       <div class="space-y-2">
@@ -44,15 +48,17 @@
         <input
           id="password"
           name="password"
-          class="py-3 px-4 w-full border-[0.5px] border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
+          class="py-3 px-4 w-full border-[0.5px] border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25 focus:border-signUpCorperBtn"
         />
       </div>
       <div class="flex justify-between">
         <div class="flex gap-x-1">
-          <input type="radio" />
-          <p class="text-bannerBlendColor text-sm">Remember Me</p>
+          <input type="radio" class="focus:border-signUpCorperBtn" />
+          <p class="text-bannerBlendColor text-xs md:text-sm">Remember Me</p>
         </div>
-        <p class="text-sm text-signUpCorperBtn">Forgot your password?</p>
+        <p class="text-xs md:text-sm text-signUpCorperBtn">
+          Forgot your password?
+        </p>
       </div>
       <div>
         <button
