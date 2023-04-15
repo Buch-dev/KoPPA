@@ -1,8 +1,12 @@
 <template>
-  <div class="container md:px-80">
+  <div class="container px-[1.75rem] max-w-4xl">
     <div class="flex flex-col items-center mt-8 text-center relative">
-      <router-link :to="{name: 'landing'}">
-        <img src="../assets/icons/arrow-left.png" alt="" class="absolute left-0">
+      <router-link :to="{ name: 'landing' }">
+        <img
+          src="../assets/icons/arrow-left.png"
+          alt=""
+          class="absolute left-0"
+        />
       </router-link>
       <img src="../assets/icons/KoPPA-lemon.png" alt="" class="" />
       <h2 class="text-3xl font-bold mt-[50px]">Create an account</h2>
@@ -17,7 +21,7 @@
       enter-active-class="duration-500 ease-out"
       leave-active-class="duration-500 ease-in"
     >
-      <form @submit.prevent="" class="mt-10 flex flex-col">
+      <form @submit.prevent="" class="mt-10 flex flex-col text-sm md:text-base">
         <div class="grid grid-cols-2 gap-[10px]">
           <Input :data="data" v-for="(data, index) in inputData" :key="index" />
           <div class="flex flex-col">
@@ -50,24 +54,41 @@
           />
         </div>
         <div class="flex flex-col mt-[29.87px]">
-          <label for="headline" class="font-sans"
-            >Headline</label
-          >
-          <textarea name="headline" id="headline" cols="20" rows="10" class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[118px] px-[20px] py-[20px]"></textarea>
+          <label for="headline" class="font-sans">Headline</label>
+          <textarea
+            name="headline"
+            id="headline"
+            cols="20"
+            rows="10"
+            class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[118px] px-[20px] py-[20px]"
+          ></textarea>
         </div>
         <div class="flex flex-col mt-[29.87px]">
-          <label for="skills" class="font-sans"
-            >Skills</label
-          >
-          <textarea name="skills" id="skills" cols="20" rows="10" class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[146px] px-[20px] py-[20px]"></textarea>
+          <label for="skills" class="font-sans">Skills</label>
+          <textarea
+            name="skills"
+            id="skills"
+            cols="20"
+            rows="10"
+            class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[146px] px-[20px] py-[20px]"
+          ></textarea>
         </div>
         <div class="flex flex-col mt-[29.87px]">
-          <label for="hobbies" class="font-sans"
-            >Hobbies</label
-          >
-          <textarea name="hobbies" id="hobbies" cols="20" rows="10" class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[229px] px-[20px] py-[20px]"></textarea>
+          <label for="hobbies" class="font-sans">Hobbies</label>
+          <textarea
+            name="hobbies"
+            id="hobbies"
+            cols="20"
+            rows="10"
+            class="border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg mt-[9px] w-full h-[229px] px-[20px] py-[20px]"
+          ></textarea>
         </div>
-        <button type="submit" class="bg-signUpCorperBtn text-white mt-5 h-16 rounded-[10px] text-lg font-bold">SUBMIT</button>
+        <button
+          type="submit"
+          class="bg-signUpCorperBtn text-white mt-5 h-16 rounded-[10px] text-lg font-bold"
+        >
+          SUBMIT
+        </button>
       </form>
     </transition>
   </div>
