@@ -41,7 +41,7 @@
             <input
               type="text"
               id="companyname"
-              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block"
+              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
             />
           </div>
           <div class="space-y-2">
@@ -49,7 +49,7 @@
             <input
               type="text"
               id="email"
-              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block"
+              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
             />
           </div>
           <div class="space-y-2">
@@ -57,7 +57,7 @@
             <input
               type="text"
               id="industry"
-              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block"
+              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
             />
           </div>
           <div class="space-y-2">
@@ -65,7 +65,7 @@
             <input
               type="text"
               id="contact"
-              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block"
+              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
             />
           </div>
           <div class="space-y-2">
@@ -73,7 +73,7 @@
             <input
               type="text"
               id="registration"
-              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block"
+              class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
             />
           </div>
         </div>

@@ -5,14 +5,19 @@
       alt=""
       class="absolute z-[-1] -top-14 right-[3px] md:hidden"
     />
-    <img
+    <!-- <img
       src="../assets/img/resource-screen-phones.png"
       alt=""
       class="hidden md:block absolute -top-9 md:left-0 md:w-96 md:h-96 xl:w-[35.125rem] xl:h-[37.1875rem] xl:-top-48 xl:left-10"
-    />
-    <div class="container px-[1.875rem] md:flex md:justify-end">
+    /> -->
+    <div class="container px-[1.875rem] md:flex md:justify-end relative">
+      <img
+        src="../assets/img/resource-screen-phones.png"
+        alt=""
+        class="hidden md:block absolute -top-20 md:left-0 md:w-96 md:h-96 xl:w-[35.125rem] xl:h-[37.1875rem] xl:-top-48 xl:left-10"
+      />
       <div
-        class="max-w-[30.625rem] text-center text-white md:pl-32 md:text-left md:flex md:flex-col xl:pl-0"
+        class="max-w-[30.625rem] text-center text-white md:pl-40 md:text-left md:flex md:flex-col xl:pl-0"
       >
         <h2 class="text-lg">Download the NYSC App</h2>
         <p class="mt-5 text-sm leading-[21.6px]">
