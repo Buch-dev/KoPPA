@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-no-repeat md:bg-none py-8 mt-[7.5rem] md:mt-80">
     <img
-      src="../assets/img/resource-mobileBg.png"
+      src="../assets/img/resource-mobile-bg.png"
       alt=""
       class="absolute z-[-1] -top-14 right-[3px] md:hidden"
     />
