@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container flex w-full justify-between py-5 shadow-md md:shadow-none"
+    class="container flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
   >
     <div class="logo">
       <router-link :to="{ name: 'home' }">
@@ -55,8 +55,8 @@
       leave-to-class="opacity-0"
     >
       <div
-        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] cursor-pointer"
-        :class="[isOpen ? 'block' : 'hidden', 'md:hidden']"
+        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] cursor-pointer duration-500 transition-transform ease-out"
+        :class="[isOpen ? 'translate-x-0' : 'translate-x-full', 'md:hidden']"
       >
         <div class="relative">
           <img
