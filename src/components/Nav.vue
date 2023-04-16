@@ -40,7 +40,11 @@
         </li>
         <li><router-link :to="{ name: 'Resources' }">Resource</router-link></li>
         <li><img src="../assets/icons/bell-pinned-red.png" alt="bell" /></li>
-        <li><img src="../assets/icons/profile-desktop.png" alt="user" /></li>
+        <li>
+          <router-link to="/user">
+            <img src="../assets/icons/profile-desktop.png" alt="user" />
+          </router-link>
+        </li>
       </ul>
     </div>
     <!-- Mobile nav -->
@@ -65,7 +69,7 @@
         <hr class="border mt-[52px]" />
         <ul class="p-4">
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Profile</router-link>
+            <router-link to="/user">Profile</router-link>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
             <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
@@ -74,28 +78,28 @@
             <router-link :to="{ name: 'Resources' }">Resource</router-link>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Notifications</router-link>
+            <a to="#notifications">Notifications</a>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Settings</router-link>
+            <a to="#settings">Settings</a>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Verification</router-link>
+            <a to="#verfication">Verification</a>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Change Password</router-link>
+            <a to="#changepassword">Change Password</a>
           </li>
           <li class="text-xl font-sans font-light">
-            <router-link to="#">Referral</router-link>
+            <a to="#referral">Referral</a>
           </li>
         </ul>
         <hr class="border mt-[10px]" />
         <ul class="p-4">
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="#">Log Out</router-link>
+            <router-link to="/">Log Out</router-link>
           </li>
           <li class="text-xl font-sans font-light">
-            <router-link to="#">Delete Account</router-link>
+            <a to="#delete">Delete Account</a>
           </li>
         </ul>
       </div>
