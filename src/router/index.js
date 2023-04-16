@@ -76,6 +76,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: "text-signUpCorperBtn font-medium",
 });
 
 export default router;
