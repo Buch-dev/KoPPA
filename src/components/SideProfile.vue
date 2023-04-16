@@ -4,7 +4,9 @@
   >
     <div class="bg-white rounded-medium p-[3.125rem]">
       <ul class="space-y-8">
-        <li>Profile</li>
+        <li>
+          <router-link to="/user">Profile</router-link>
+        </li>
         <li>Notifications</li>
         <li>Settings</li>
         <li>Verification</li>
