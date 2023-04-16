@@ -38,6 +38,7 @@
         <input
           id="email"
           name="email"
+          v-model="username"
           class="py-3 px-4 w-full border-[0.5px] focus:border-signUpCorperBtn border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
         />
       </div>
@@ -63,7 +64,7 @@
       <div>
         <button
           class="py-4 bg-signUpCorperBtn text-white w-full mt-10 rounded-[0.625rem]"
-          @click="goToAccount"
+          @click="goToAccount(username)"
           type="button"
         >
           Sign In
@@ -81,25 +82,39 @@
 
 <script>
 import router from "@/router";
+import { ref } from "vue";
+import { useStore } from "vuex";
 
 export default {
   name: "SignIn",
   props: ["message", "pathName"],
   setup(props) {
+    const username = ref("");
+    const store = useStore();
+
     const goBack = () => {
       router.back();
     };
 
-    const goToAccount = () => {
+    const goToAccount = (payload) => {
       console.log(props.pathName);
       if (props.pathName === "signin-corper") {
         router.push("/company");
         return;
       }
+
+      if (username.value) {
+        store.dispatch("addUser", payload);
+      }
+
       router.push("/home");
     };
 
-    return { goBack, goToAccount };
+    // const addUser = (payload) => {
+    //   store.dispatch("addUser", payload)
+    // }
+
+    return { username, goBack, goToAccount };
   },
 };
 </script>
