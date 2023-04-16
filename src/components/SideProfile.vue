@@ -16,7 +16,9 @@
     </div>
     <div class="bg-white rounded-medium p-[3.125rem]">
       <ul class="space-y-8">
-        <li>log out</li>
+        <li>
+          <router-link to="/">log out</router-link>
+        </li>
         <li>Delete Account</li>
       </ul>
     </div>
