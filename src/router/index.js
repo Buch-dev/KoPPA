@@ -4,6 +4,7 @@ import AboutView from "../views/AboutView.vue";
 import SignInCorper from "@/views/SignInCorper.vue";
 import SignInCompany from "@/views/SignInCompany.vue";
 import CreateCompanyAcct from "@/views/CreateCompanyAcct.vue";
+import NotFoundVue from "@/views/NotFound.vue";
 
 const routes = [
   {
@@ -64,6 +65,11 @@ const routes = [
     path: "/signin-company",
     name: "signin-company",
     component: SignInCompany,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "not-found",
+    component: NotFoundVue,
   },
 ];
 
