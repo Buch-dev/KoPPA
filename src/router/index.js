@@ -5,6 +5,7 @@ import SignInCorper from "@/views/SignInCorper.vue";
 import SignInCompany from "@/views/SignInCompany.vue";
 import CreateCompanyAcct from "@/views/CreateCompanyAcct.vue";
 import NotFoundVue from "@/views/NotFound.vue";
+import FaqVue from "@/views/Faq.vue";
 
 const routes = [
   {
@@ -21,11 +22,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/HomeView"),
   },
-  {
-    path: "/about",
-    name: "about",
-    component: AboutView,
-  },
+
   {
     path: "/job-listings",
     name: "JobListings",
@@ -65,6 +62,16 @@ const routes = [
     path: "/signin-company",
     name: "signin-company",
     component: SignInCompany,
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: AboutView,
+  },
+  {
+    path: "/faqs",
+    name: "faqs",
+    component: FaqVue,
   },
   {
     path: "/:catchAll(.*)",
