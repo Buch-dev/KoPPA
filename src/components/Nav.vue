@@ -39,7 +39,11 @@
           <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
         </li>
         <li><router-link :to="{ name: 'Resources' }">Resource</router-link></li>
-        <li><img src="../assets/icons/bell-pinned-red.png" alt="bell" /></li>
+        <li>
+          <button @click="handleModalOpen">
+            <img src="../assets/icons/bell-pinned-red.png" alt="bell" />
+          </button>
+        </li>
         <li>
           <router-link to="/user">
             <img src="../assets/icons/profile-desktop.png" alt="user" />
@@ -77,7 +81,10 @@
           <li class="mb-5 text-xl font-sans font-light">
             <router-link :to="{ name: 'Resources' }">Resource</router-link>
           </li>
-          <li class="mb-5 text-xl font-sans font-light">
+          <li
+            class="mb-5 text-xl font-sans font-light"
+            @click="handleModalOpen"
+          >
             <a to="#notifications">Notifications</a>
           </li>
           <li class="mb-5 text-xl font-sans font-light">
@@ -106,16 +113,20 @@
     </transition>
   </nav>
   <Refer />
+  <Modal v-if="openModal" :closeModal="handleModalClose" />
+  <div v-else></div>
 </template>
 
 <script>
 import Refer from "@/components/Refer.vue";
+import Modal from "./Modal.vue";
 export default {
   name: "Nav",
-  components: { Refer },
+  components: { Refer, Modal },
   data() {
     return {
       isOpen: false,
+      openModal: false,
     };
   },
   methods: {
@@ -126,6 +137,17 @@ export default {
       } else {
         document.body.classList.remove("menu-open");
       }
+    },
+    handleModalOpen() {
+      this.openModal = true;
+      if (this.isOpen) {
+        this.isOpen = false;
+        document.body.classList.remove("menu-open");
+        return;
+      }
+    },
+    handleModalClose() {
+      this.openModal = false;
     },
   },
   mounted() {
