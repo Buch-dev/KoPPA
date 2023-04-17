@@ -21,6 +21,7 @@ module.exports = {
         jobListingsBorderColor: "#487456",
         jobListingsColor: "#494949",
         jobListingsApplyBtnColor: "#034f1c",
+        darkLightBlue: "#ebfff3",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
