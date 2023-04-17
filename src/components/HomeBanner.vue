@@ -26,6 +26,7 @@
         >
           <button
             class="bg-signUpCorperBtn text-white rounded-xl py-6 px-7 font-semibold font-sans w-40 md:py-4 md:font-medium md:text-sm md:px-1"
+            @click="goToJobs"
           >
             Browse Jobs
           </button>
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import router from "@/router";
 export default {
   name: "Banner",
   data() {
@@ -50,6 +52,11 @@ export default {
       text2:
         "Network with Corpers, browse through Jobs, and find the best role suited for your career and growth.",
     };
+  },
+  methods: {
+    goToJobs() {
+      router.push("/job-listings");
+    },
   },
   computed: {
     user() {
