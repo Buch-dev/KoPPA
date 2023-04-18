@@ -39,7 +39,7 @@
           id="email"
           name="email"
           v-model="username"
-          class="py-3 px-4 w-full border-[0.5px] focus:border-signUpCorperBtn border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
+          class="py-3 px-4 w-full border-[0.5px] focus:outline-none focus:border-signUpCorperBtn border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25"
         />
       </div>
       <div class="space-y-2">
@@ -49,12 +49,15 @@
         <input
           id="password"
           name="password"
-          class="py-3 px-4 w-full border-[0.5px] border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25 focus:border-signUpCorperBtn"
+          class="py-3 px-4 w-full border-[0.5px] border-solid border-bannerBlendColor rounded-[0.625rem] border-opacity-25 focus:outline-none focus:border-signUpCorperBtn"
         />
       </div>
       <div class="flex justify-between">
         <div class="flex gap-x-1">
-          <input type="radio" class="focus:border-signUpCorperBtn" />
+          <input
+            type="radio"
+            class="focus:outline-none focus:border-signUpCorperBtn"
+          />
           <p class="text-bannerBlendColor text-xs md:text-sm">Remember Me</p>
         </div>
         <p class="text-xs md:text-sm text-signUpCorperBtn">
