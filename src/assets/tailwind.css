@@ -4,6 +4,12 @@
 
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @layer components {
   [data-state-desktop="true"] {
     @apply hidden md:block;
