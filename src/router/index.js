@@ -6,6 +6,9 @@ import SignInCompany from "@/views/SignInCompany.vue";
 import CreateCompanyAcct from "@/views/CreateCompanyAcct.vue";
 import NotFoundVue from "@/views/NotFound.vue";
 import FaqVue from "@/views/Faq.vue";
+import PrivacyPolicy from "@/views/PrivacyPolicy.vue";
+import Terms from "@/views/Terms.vue";
+import ContactUsViewVue from "@/views/ContactUsView.vue";
 
 const routes = [
   {
@@ -72,6 +75,21 @@ const routes = [
     path: "/faqs",
     name: "faqs",
     component: FaqVue,
+  },
+  {
+    path: "/privacy-policy",
+    name: "privacy-policy",
+    component: PrivacyPolicy,
+  },
+  {
+    path: "/terms",
+    name: "terms",
+    component: Terms,
+  },
+  {
+    path: "/contact-us",
+    name: "contact",
+    component: ContactUsViewVue,
   },
   {
     path: "/:catchAll(.*)",
