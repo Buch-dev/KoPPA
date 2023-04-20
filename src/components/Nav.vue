@@ -35,10 +35,12 @@
         @click="toggleMobileNav"
       />
       <ul class="hidden md:flex gap-10 items-center">
-        <li>
+        <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
           <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
         </li>
-        <li><router-link :to="{ name: 'Resources' }">Resource</router-link></li>
+        <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
+          <router-link :to="{ name: 'Resources' }">Resource</router-link>
+        </li>
         <li>
           <button @click="handleModalOpen">
             <img src="../assets/icons/bell-pinned-red.png" alt="bell" />
