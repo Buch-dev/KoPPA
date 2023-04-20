@@ -24,7 +24,7 @@
       /> -->
       <router-link :to="{ name: 'signin-corper' }">
         <button
-          class="md:block rounded border border-signUpCorperBtn text-signUpCorperBtn py-2 px-6 md:py-4 md:px-6 text-sm md:text-lg"
+          class="md:block rounded-[0.625rem] border border-signUpCorperBtn text-signUpCorperBtn py-2 px-6 md:py-5 md:px-6 text-sm md:text-lg"
         >
           SIGN IN
         </button>
