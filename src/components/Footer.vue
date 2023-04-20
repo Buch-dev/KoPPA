@@ -1,19 +1,19 @@
 <template>
   <footer class="mt-28">
     <ul class="container flex gap-3 justify-end">
-      <li class="text-xs font-sans">
+      <li class="text-xs font-sans whitespace-nowrap">
         <router-link to="/about"> About Us</router-link>
       </li>
-      <li class="text-xs font-sans">
+      <li class="text-xs font-sans whitespace-nowrap">
         <router-link to="/faqs"> FAQs</router-link>
       </li>
-      <li class="text-xs font-sans">
+      <li class="text-xs font-sans whitespace-nowrap">
         <router-link to="/privacy-policy"> Privacy Policy</router-link>
       </li>
-      <li class="text-xs font-sans">
+      <li class="text-xs font-sans whitespace-nowrap">
         <router-link to="/terms"> Terms of use</router-link>
       </li>
-      <li class="text-xs font-sans">
+      <li class="text-xs font-sans whitespace-nowrap">
         <router-link to="/contact-us"> Contact Us</router-link>
       </li>
     </ul>
