@@ -24,17 +24,26 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/HomeView"),
+    meta: {
+      authIsRequired: true,
+    },
   },
 
   {
     path: "/job-listings",
     name: "JobListings",
     component: () => import("../views/JobListings.vue"),
+    meta: {
+      authIsRequired: true,
+    },
   },
   {
     path: "/resources",
     name: "Resources",
     component: () => import("../views/Resources.vue"),
+    meta: {
+      authIsRequired: true,
+    },
   },
   {
     path: "/create-corper-acct",
@@ -50,11 +59,17 @@ const routes = [
     path: "/user",
     name: "User",
     component: () => import("../views/UserProfile.vue"),
+    meta: {
+      authIsRequired: true,
+    },
   },
   {
     path: "/company",
     name: "Company",
     component: () => import("../views/CompanyProfile.vue"),
+    meta: {
+      authIsRequired: true,
+    },
   },
   {
     path: "/signin-corper",
@@ -102,6 +117,47 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   linkActiveClass: "text-signUpCorperBtn font-medium",
+});
+
+const isAuthenticated = () => localStorage.getItem("koppa-token");
+
+const canUserAccess = (to) => {
+  if (
+    !isAuthenticated() &&
+    to.meta.authIsRequired &&
+    to.name !== "signin-corper"
+  ) {
+    return false;
+  }
+
+  return true;
+};
+
+router.beforeEach(async (to, from) => {
+  const canAccess = await canUserAccess(to);
+
+  if (
+    (isAuthenticated() && to.name === "signin-corper") ||
+    (isAuthenticated() && to.name === "signin-company")
+  ) {
+    return {
+      name: "home",
+    };
+  }
+
+  // if (isAuthenticated() && to.name === "log-out") {
+  //   userStore.logOut();
+
+  //   return {
+  //     name: "sign-in",
+  //   };
+  // }
+
+  if (!canAccess) {
+    return {
+      name: "landing",
+    };
+  }
 });
 
 export default router;
