@@ -1,9 +1,10 @@
 <template>
   <nav
+    v-if="signedIn || token"
     class="container flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
   >
     <div class="logo">
-      <router-link :to="{ name: 'home' }">
+      <router-link to="/home">
         <img
           src="../assets/img/koPPA-logo.png"
           alt="logo"
@@ -34,7 +35,7 @@
         class="md:hidden cursor-pointer w-7 h-5 object-cover"
         @click="toggleMobileNav"
       />
-      <ul class="hidden md:flex gap-10 items-center">
+      <ul v-if="signedIn || token" class="hidden md:flex gap-10 items-center">
         <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
           <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
         </li>
@@ -61,7 +62,7 @@
       leave-to-class="opacity-0"
     >
       <div
-        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] cursor-pointer duration-500 transition-transform ease-out"
+        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] duration-500 transition-transform ease-out"
         :class="[isOpen ? 'translate-x-0' : 'translate-x-full', 'md:hidden']"
       >
         <div class="relative">
@@ -105,7 +106,7 @@
         <hr class="border mt-[10px]" />
         <ul class="p-4">
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="/">Log Out</router-link>
+            <router-link to="/" @click="handleLogOut">Log Out</router-link>
           </li>
           <li class="text-xl font-sans font-light">
             <a to="#delete">Delete Account</a>
@@ -114,21 +115,25 @@
       </div>
     </transition>
   </nav>
-  <Refer />
+  <Navigation v-else />
+  <Refer v-if="signedIn || token" />
+  <div v-else></div>
   <Modal v-if="openModal" :closeModal="handleModalClose" />
   <div v-else></div>
 </template>
 
 <script>
 import Refer from "@/components/Refer.vue";
+import Navigation from "./Navigation.vue";
 import Modal from "./Modal.vue";
 export default {
   name: "Nav",
-  components: { Refer, Modal },
+  components: { Refer, Modal, Navigation },
   data() {
     return {
       isOpen: false,
       openModal: false,
+      token: "",
     };
   },
   methods: {
@@ -151,6 +156,9 @@ export default {
     handleModalClose() {
       this.openModal = false;
     },
+    handleLogOut() {
+      this.$store.dispatch("signOut");
+    },
   },
   mounted() {
     if (this.isOpen) {
@@ -158,6 +166,13 @@ export default {
     } else {
       document.body.classList.remove("menu-open");
     }
+    this.token = localStorage.getItem("koppa-token");
+  },
+  computed: {
+    signedIn() {
+      console.log(this.$store.getters.getSignedIn);
+      return this.$store.getters.getSignedIn;
+    },
   },
 };
 </script>
