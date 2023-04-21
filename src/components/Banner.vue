@@ -21,13 +21,13 @@
         >
           <router-link
             to="/create-corper-acct"
-            class="bg-signUpCorperBtn border h-16 border-signUpCorperBtn text-white rounded-xl py-3 px-6 w-1/2 md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center hover:bg-white hover:text-signUpCorperBtn transition-colors duration-300"
+            class="bg-signUpCorperBtn border h-[4.375rem] border-signUpCorperBtn text-white rounded-[0.625rem] py-3 px-6 w-1/2 md:py-4 md:font-medium text-sm xl:text-base md:leading-6 flex items-center justify-center hover:bg-white hover:text-signUpCorperBtn transition-colors duration-300"
           >
             Sign Up as a Corper
           </router-link>
           <router-link
             to="/create-company-acct"
-            class="bg-transparent border h-16 border-white text-white rounded-xl py-3 px-6 w-1/2 md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm md:h-auto flex items-center justify-center hover:bg-signUpCorperBtn hover:text-white transition-colors duration-300"
+            class="bg-transparent border h-[4.375rem] border-white text-white rounded-[0.625rem] py-3 px-[0.625rem] w-1/2 md:border-signUpCorperBtn md:text-signUpCorperBtn md:py-4 md:font-medium text-sm xl:text-base md:leading-6 flex items-center justify-center hover:bg-signUpCorperBtn hover:text-white transition-colors duration-300"
           >
             Sign Up as an Employer
           </router-link>

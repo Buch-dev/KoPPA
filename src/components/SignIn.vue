@@ -101,6 +101,7 @@ export default {
 
     const goToAccount = (payload) => {
       console.log(props.pathName);
+      localStorage.setItem("koppa-token", "team-15-koppa-token");
       if (props.pathName === "signin-corper") {
         router.push("/company");
         return;

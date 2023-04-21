@@ -3,7 +3,7 @@
     <Nav />
     <ResourcesHero />
   </section>
-  <section class="bg-[#21513b99] md:bg-empowerBackgroundColor">
+  <section class="bg-empowerBackgroundColor">
     <ResourcesDownload />
   </section>
   <section>

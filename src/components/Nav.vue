@@ -1,13 +1,14 @@
 <template>
   <nav
-    class="container flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
+    v-if="signedIn || token"
+    class="container px-[1.875rem] flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
   >
     <div class="logo">
-      <router-link :to="{ name: 'home' }">
+      <router-link to="/home">
         <img
           src="../assets/img/koPPA-logo.png"
           alt="logo"
-          class="w-[119.15px] md:w-[181.21px]"
+          class="w-[119.15px] h-[3.875rem] xl:w-[181.21px] object-contain"
         />
       </router-link>
     </div>
@@ -16,16 +17,19 @@
         enter-active-class="duration-500 ease-out"
         leave-active-class="duration-500 ease-in"
       >
-        <div class="hidden md:flex search-bar items-center gap-7">
+        <div class="hidden md:flex search-bar items-center gap-7 relative">
           <input
             type="search"
             name=""
             id="search"
-            :style="{ backgroundImage: `url(${img})` }"
-            class="w-[400px] h-[50px] rounded-[100px] px-5 py-7 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor"
+            class="w-48 ml-8 xl:ml-0 xl:mr-16 xl:w-[400px] h-[50px] rounded-[100px] pl-11 pr-5 py-3 xl:py-6 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor"
           />
-          <img :src="img" alt="" class="hidden" />
-          <img src="../assets/icons/search-line.png" alt="search" class="w-8" />
+          <!-- <img :src="img" alt="" class="hidden" /> -->
+          <img
+            src="../assets/icons/search-line.png"
+            alt="search"
+            class="w-6 h-6 absolute left-12 xl:left-3"
+          />
         </div>
       </transition>
       <img
@@ -34,11 +38,18 @@
         class="md:hidden cursor-pointer w-7 h-5 object-cover"
         @click="toggleMobileNav"
       />
-      <ul class="hidden md:flex gap-10 items-center">
-        <li>
-          <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
+      <ul
+        v-if="signedIn || token"
+        class="hidden md:flex gap-10 items-center text-sm xl:text-base"
+      >
+        <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
+          <router-link :to="{ name: 'JobListings' }" class="whitespace-nowrap"
+            >Job Listing</router-link
+          >
         </li>
-        <li><router-link :to="{ name: 'Resources' }">Resource</router-link></li>
+        <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
+          <router-link :to="{ name: 'Resources' }">Resource</router-link>
+        </li>
         <li>
           <button @click="handleModalOpen">
             <img src="../assets/icons/bell-pinned-red.png" alt="bell" />
@@ -59,7 +70,7 @@
       leave-to-class="opacity-0"
     >
       <div
-        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] cursor-pointer duration-500 transition-transform ease-out"
+        class="bg-white fixed top-0 right-0 w-[223px] z-10 rounded-l-[20px] duration-500 transition-transform ease-out"
         :class="[isOpen ? 'translate-x-0' : 'translate-x-full', 'md:hidden']"
       >
         <div class="relative">
@@ -103,7 +114,7 @@
         <hr class="border mt-[10px]" />
         <ul class="p-4">
           <li class="mb-5 text-xl font-sans font-light">
-            <router-link to="/">Log Out</router-link>
+            <router-link to="/" @click="handleLogOut">Log Out</router-link>
           </li>
           <li class="text-xl font-sans font-light">
             <a to="#delete">Delete Account</a>
@@ -112,21 +123,25 @@
       </div>
     </transition>
   </nav>
-  <Refer />
+  <Navigation v-else />
+  <Refer v-if="signedIn || token" />
+  <div v-else></div>
   <Modal v-if="openModal" :closeModal="handleModalClose" />
   <div v-else></div>
 </template>
 
 <script>
 import Refer from "@/components/Refer.vue";
+import Navigation from "./Navigation.vue";
 import Modal from "./Modal.vue";
 export default {
   name: "Nav",
-  components: { Refer, Modal },
+  components: { Refer, Modal, Navigation },
   data() {
     return {
       isOpen: false,
       openModal: false,
+      token: "",
     };
   },
   methods: {
@@ -149,6 +164,9 @@ export default {
     handleModalClose() {
       this.openModal = false;
     },
+    handleLogOut() {
+      this.$store.dispatch("signOut");
+    },
   },
   mounted() {
     if (this.isOpen) {
@@ -156,6 +174,13 @@ export default {
     } else {
       document.body.classList.remove("menu-open");
     }
+    this.token = localStorage.getItem("koppa-token");
+  },
+  computed: {
+    signedIn() {
+      console.log(this.$store.getters.getSignedIn);
+      return this.$store.getters.getSignedIn;
+    },
   },
 };
 </script>

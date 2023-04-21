@@ -17,7 +17,7 @@
     <div class="bg-white rounded-medium p-[3.125rem]">
       <ul class="space-y-8">
         <li>
-          <router-link to="/">log out</router-link>
+          <router-link to="/" @click="logOut">log out</router-link>
         </li>
         <li>Delete Account</li>
       </ul>
@@ -25,7 +25,17 @@
   </div>
 </template>
 <script>
+import { useStore } from "vuex";
 export default {
   name: "SideProfile",
+  setup() {
+    const store = useStore();
+
+    const logOut = () => {
+      store.dispatch("signOut");
+    };
+
+    return { logOut };
+  },
 };
 </script>

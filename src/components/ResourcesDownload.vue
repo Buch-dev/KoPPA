@@ -1,10 +1,7 @@
 <template>
-  <div class="relative bg-no-repeat md:bg-none py-8 mt-[7.5rem] md:mt-80">
-    <img
-      src="../assets/img/resource-mobile-bg.png"
-      alt=""
-      class="absolute z-[-1] -top-14 right-[3px] md:hidden"
-    />
+  <div
+    class="relative max-h-[23rem] md:max-h-max overflow-y-hidden md:overflow-y-visible md:bg-none pt-5 pb-9 mt-[7.5rem] md:mt-80"
+  >
     <!-- <img
       src="../assets/img/resource-screen-phones.png"
       alt=""
@@ -26,17 +23,28 @@
           your smartphone internet connection to keep you informed about
           National Youth Service Corps.
         </p>
-        <div class="flex flex-col mt-6 gap-y-5 md:flex-row">
-          <img
-            src="../assets/img/googleplay.png"
-            alt=""
-            class="w-40 h-12 object-contain"
-          />
-          <img
-            src="../assets/img/appstore.png"
-            alt=""
-            class="w-40 h-12 object-contain"
-          />
+        <div class="flex mt-[0.625rem]">
+          <div class="flex flex-col mt-6 gap-y-5 md:flex-row">
+            <img
+              src="../assets/img/googleplay.png"
+              alt=""
+              class="w-40 h-12 object-contain"
+            />
+            <img
+              src="../assets/img/appstore.png"
+              alt=""
+              class="w-40 h-12 object-contain"
+            />
+          </div>
+          <div
+            class="md:hidden relative after:absolute after:inset-0 after:bg-empowerBackgroundColor/25"
+          >
+            <img
+              src="../assets/img/resource-mobile-bg.png"
+              alt=""
+              class="md:hidden"
+            />
+          </div>
         </div>
       </div>
     </div>
