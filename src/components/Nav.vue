@@ -1,14 +1,14 @@
 <template>
   <nav
     v-if="signedIn || token"
-    class="container flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
+    class="container px-[1.875rem] flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
   >
     <div class="logo">
       <router-link to="/home">
         <img
           src="../assets/img/koPPA-logo.png"
           alt="logo"
-          class="w-[119.15px] md:w-[181.21px]"
+          class="w-[119.15px] h-[3.875rem] xl:w-[181.21px] object-contain"
         />
       </router-link>
     </div>
@@ -17,16 +17,19 @@
         enter-active-class="duration-500 ease-out"
         leave-active-class="duration-500 ease-in"
       >
-        <div class="hidden md:flex search-bar items-center gap-7">
+        <div class="hidden md:flex search-bar items-center gap-7 relative">
           <input
             type="search"
             name=""
             id="search"
-            :style="{ backgroundImage: `url(${img})` }"
-            class="w-[400px] h-[50px] rounded-[100px] px-5 py-7 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor"
+            class="w-48 ml-8 xl:ml-0 xl:mr-16 xl:w-[400px] h-[50px] rounded-[100px] pl-11 pr-5 py-3 xl:py-6 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor"
           />
-          <img :src="img" alt="" class="hidden" />
-          <img src="../assets/icons/search-line.png" alt="search" class="w-8" />
+          <!-- <img :src="img" alt="" class="hidden" /> -->
+          <img
+            src="../assets/icons/search-line.png"
+            alt="search"
+            class="w-6 h-6 absolute left-12 xl:left-3"
+          />
         </div>
       </transition>
       <img
@@ -35,9 +38,14 @@
         class="md:hidden cursor-pointer w-7 h-5 object-cover"
         @click="toggleMobileNav"
       />
-      <ul v-if="signedIn || token" class="hidden md:flex gap-10 items-center">
+      <ul
+        v-if="signedIn || token"
+        class="hidden md:flex gap-10 items-center text-sm xl:text-base"
+      >
         <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
-          <router-link :to="{ name: 'JobListings' }">Job Listing</router-link>
+          <router-link :to="{ name: 'JobListings' }" class="whitespace-nowrap"
+            >Job Listing</router-link
+          >
         </li>
         <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
           <router-link :to="{ name: 'Resources' }">Resource</router-link>
