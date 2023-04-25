@@ -6,7 +6,7 @@
     <Empowering />
     <Companies />
     <div
-      class="flex flex-col md:flex-row md:container md:px-[1.875rem] md:items-start md:mt-28"
+      class="flex flex-col mt-14 md:flex-row md:container md:px-[1.875rem] md:items-start md:mt-28"
     >
       <WhyKoppa class="md:w-1/2" />
       <ContactUs class="md:w-1/2" />
