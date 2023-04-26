@@ -15,6 +15,7 @@
             src="../assets/icons/close-banner-mobile.png"
             alt=""
             class="md:w-full md:hidden cursor-pointer"
+            @click="closeRefer"
           />
           <img
             src="../assets/icons/refer-close-desktop.png"
