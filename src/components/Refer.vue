@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primaryYellow">
+  <div v-if="show" class="bg-primaryYellow">
     <div
       class="container px-[1.875rem] xl:pl-32 flex justify-between xl:justify-normal items-center py-2"
     >
@@ -20,6 +20,7 @@
             src="../assets/icons/refer-close-desktop.png"
             alt=""
             class="hidden md:block cursor-pointer"
+            @click="closeRefer"
           />
         </div>
       </div>
@@ -34,7 +35,13 @@ export default {
     return {
       msg: "Refer to friends and help them get started on their Service year",
       btnMsg: "Refer a friend",
+      show: true,
     };
+  },
+  methods: {
+    closeRefer() {
+      this.show = !this.show
+    }
   },
 };
 </script>
