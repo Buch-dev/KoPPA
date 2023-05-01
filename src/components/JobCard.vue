@@ -3,9 +3,9 @@
     class="jobCard mt-5 py-5 px-5 text-blackColor shadow-md hover:shadow-lg border border-jobCardBorderColor hover:border-jobCardBackgroundColorHover bg-jobCardBackgroundColor hover:bg-white transition-all duration-500 rounded-2xl md:w-full text-sm"
   >
     <div class="md:flex md:justify-between items-start">
-      <div class="flex justify-between items-start gap-8">
-        <img :src="require(`../assets/icons/${post.logo}.png`)" alt="" />
-        <div class="md:space-y-7">
+      <div class="flex justify-between items-start">
+        <img :src="require(`../assets/icons/${post.logo}.png`)" alt="" class="mr-4" />
+        <div class="ml-4 md:space-y-7">
           <h6 class="font-medium">{{ post.heading }}</h6>
           <div
             class="mt-3 md:flex md:gap-x-2 md:items-center font-sans font-normal text-bannerBlendColor"
