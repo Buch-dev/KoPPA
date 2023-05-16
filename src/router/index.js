@@ -136,26 +136,28 @@ const canUserAccess = (to) => {
 router.beforeEach(async (to, from) => {
   const canAccess = await canUserAccess(to);
 
-  if (
-    (isAuthenticated() && to.name === "signin-corper") ||
-    (isAuthenticated() && to.name === "signin-company")
-  ) {
+  if (isAuthenticated() && to.name === "signin-corper") {
     return {
       name: "home",
     };
   }
 
-  // if (isAuthenticated() && to.name === "log-out") {
-  //   userStore.logOut();
-
-  //   return {
-  //     name: "sign-in",
-  //   };
-  // }
-
-  if (!canAccess) {
+  if (isAuthenticated() && to.name === "signin-company") {
     return {
-      name: "landing",
+      name: "Company",
+    };
+  }
+  if (!canAccess) {
+    // if (isAuthenticated() && to.name === "log-out") {
+    //   userStore.logOut();
+
+    //   return {
+    //     name: "sign-in",
+    //   };
+    // }
+
+    return {
+      name: "signin-corper",
     };
   }
 });
