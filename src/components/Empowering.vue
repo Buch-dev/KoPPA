@@ -6,7 +6,7 @@
       <img
         :src="require(`../assets/img/${nyscLogo}.png`)"
         alt=""
-        class=" md:w-1/2"
+        class="md:w-1/2"
       />
       <div class="text text-white bg-empowerBackgroundColor">
         <div class="text-center px-5 md:px-0 md:text-left">
@@ -35,14 +35,18 @@
           <div
             class="btn mt-6 mb-20 flex justify-evenly md:justify-start md:gap-5 md:mt-16"
           >
-            <button class="py-4 px-6 rounded-xl border border-white">
+            <router-link
+              to="/job-listings"
+              class="py-4 px-6 rounded-xl border border-white"
+            >
               Find a Job
-            </button>
-            <button
+            </router-link>
+            <router-link
+              to="/company"
               class="py-4 px-6 rounded-xl border border-white bg-white text-signUpCorperBtn"
             >
               Post a Job
-            </button>
+            </router-link>
           </div>
         </div>
       </div>
