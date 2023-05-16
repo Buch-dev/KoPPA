@@ -7,7 +7,7 @@
       />
 
       <div class="relative">
-        <h1 class="mt-14 text-blackColor text-3xl">John Edwards</h1>
+        <h1 class="mt-14 text-blackColor text-3xl">{{ user ? user : name }}</h1>
         <img
           src="../assets/icons/pen.png"
           alt=""
@@ -38,7 +38,12 @@
 <script>
 export default {
   name: "ProfileHeader",
-  props: ["imgUrl"],
+  props: ["imgUrl", "name"],
+  computed: {
+    user() {
+      return this.$store.getters.getUser;
+    },
+  },
   //   setup() {
   //     return { imgUrl };
   //   },
