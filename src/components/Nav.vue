@@ -98,16 +98,28 @@
           >
             <a to="#notifications">Notifications</a>
           </li>
-          <li class="mb-5 text-xl font-sans font-light">
+          <li
+            class="mb-5 text-xl font-sans cursor-pointer font-light"
+            @click="handleNotAvailableModalOpen"
+          >
             <a to="#settings">Settings</a>
           </li>
-          <li class="mb-5 text-xl font-sans font-light">
+          <li
+            class="mb-5 text-xl font-sans cursor-pointer font-light"
+            @click="handleNotAvailableModalOpen"
+          >
             <a to="#verfication">Verification</a>
           </li>
-          <li class="mb-5 text-xl font-sans font-light">
+          <li
+            class="mb-5 text-xl font-sans cursor-pointer font-light"
+            @click="handleNotAvailableModalOpen"
+          >
             <a to="#changepassword">Change Password</a>
           </li>
-          <li class="text-xl font-sans font-light">
+          <li
+            class="text-xl font-sans cursor-pointer font-light"
+            @click="handleNotAvailableModalOpen"
+          >
             <a to="#referral">Referral</a>
           </li>
         </ul>
@@ -116,7 +128,10 @@
           <li class="mb-5 text-xl font-sans font-light">
             <router-link to="/" @click="handleLogOut">Log Out</router-link>
           </li>
-          <li class="text-xl font-sans font-light">
+          <li
+            class="text-xl font-sans cursor-pointer font-light"
+            @click="handleNotAvailableModalOpen"
+          >
             <a to="#delete">Delete Account</a>
           </li>
         </ul>
@@ -128,20 +143,29 @@
   <div v-else></div>
   <Modal v-if="openModal" :closeModal="handleModalClose" />
   <div v-else></div>
+  <div>
+    <NotAvailableModal
+      v-if="notAvailableModal"
+      :closeModal="handleNotAvailableModalClose"
+    />
+    <div v-else></div>
+  </div>
 </template>
 
 <script>
 import Refer from "@/components/Refer.vue";
 import Navigation from "./Navigation.vue";
 import Modal from "./Modal.vue";
+import NotAvailableModal from "./NotAvailableModal.vue";
 export default {
   name: "Nav",
-  components: { Refer, Modal, Navigation },
+  components: { Refer, Modal, Navigation, NotAvailableModal },
   data() {
     return {
       isOpen: false,
       openModal: false,
       token: "",
+      notAvailableModal: "",
     };
   },
   methods: {
@@ -166,6 +190,12 @@ export default {
     },
     handleLogOut() {
       this.$store.dispatch("signOut");
+    },
+    handleNotAvailableModalOpen() {
+      this.notAvailableModal = true;
+    },
+    handleNotAvailableModalClose() {
+      this.notAvailableModal = false;
     },
   },
   mounted() {
