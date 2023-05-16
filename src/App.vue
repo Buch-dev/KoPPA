@@ -1,4 +1,4 @@
-<template>
+ <template>
   <router-view />
   <Footer />
 </template>
@@ -8,7 +8,7 @@ import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
-  components: {Footer },
+  components: { Footer },
 };
 </script>
 
@@ -24,6 +24,6 @@ body {
 }
 
 body.menu-open {
-    @apply bg-black bg-opacity-50;
+  @apply bg-black bg-opacity-50;
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <nav
+  <div class="shadow-md">
+    <nav
     v-if="signedIn || token"
-    class="container px-[1.875rem] flex w-full justify-between py-5 shadow-md md:shadow-none overflow-x-hidden"
+    class="container px-[1.875rem] flex w-full justify-between py-5 overflow-x-hidden"
   >
     <div class="logo">
       <router-link to="/home">

@@ -1,14 +1,14 @@
 <template>
   <div class="mt-20 md:bg-empowerBackgroundColor">
     <div
-      class="md:container flex flex-col gap-24 items-center md:flex-row-reverse md:gap-0"
+      class="md:container flex flex-col items-center md:flex-row-reverse md:gap-0"
     >
       <img
         :src="require(`../assets/img/${nyscLogo}.png`)"
         alt=""
-        class="md:w-1/2"
+        class="mb-12 md:w-1/2 md:mb-0"
       />
-      <div class="text text-white bg-empowerBackgroundColor">
+      <div class="text text-white bg-empowerBackgroundColor mt-12 md:mt-0">
         <div class="text-center px-5 md:px-0 md:text-left">
           <h2
             class="font-semibold text-3xl mt-7 md:mt-16 md:text-4xl md:underline"

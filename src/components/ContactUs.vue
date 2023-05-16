@@ -15,7 +15,7 @@
 
         <form
           @submit.prevent="submitForm"
-          class="flex flex-col gap-y-[1.875rem] mt-10 font-sans"
+          class="grid gap-y-[1.875rem] mt-10 font-sans"
         >
           <input
             type="text"
