@@ -6,36 +6,42 @@
       <div class="bg-jobCardBackgroundColor p-5 mt-10 md:px-20 md:pt-14">
         <div>
           <p class="text-bannerBlendColor text-sm leading-[22px] text-left">
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            velit sagittis nisi elementum. Ultrices et potenti netus turpis
-            magna tincidunt. Habitasse pellentesque lobortis tortor adipiscing
-            euismod a. Viverra vehicula ullamcorper pretium egestas. Varius quam
-            egestas massa mattis in magna elit habitasse pharetra. Risus sit ut
-            hendrerit semper aenean tortor aliquet tincidunt ridiculus. Nisi
-            hendrerit in molestie elit eget tristique. Diam neque vitae tempus
-            lectus.
+            KoPPA uses cutting-edge technology and a user centered focus in a
+            B2B2C model to help users achieve exactly what they may intend. The
+            harrowing reality of displacement in the Nigerian work force, where
+            graduates of accounting, for example, find themselves in schools
+            teaching, is a remote cause of unemployment. Many graduates thus
+            become unemployable and unfit for most work places since their
+            skills haven’t be rightly applied. We offer a solution that uses
+            machine learning to match the right candidates to the right work
+            place, and offer matching recommendations to hiring teams. No one
+            does it better.
           </p>
         </div>
 
         <div class="mt-7">
           <h2 class="text-blackColor text-xl md:text-2xl">Mission</h2>
-          <p class="mt-5 text-bannerBlendColor text-sm text-left">
-            Turpis ultrices amet congue ac. Id sapien tellus blandit egestas
-            tristique. Malesuada praesent tempus malesuada id ornare netus non.
-            Est in tincidunt platea fringilla venenatis lectus nunc. Massa amet
-            mattis facilisis dictumst. Non fusce id tristique donec mattis
-            condimentum pellentesque. Eu vitae diam sit morbi ut vivamus. Sem
-            mauris ornare
+          <p
+            class="mt-5 text-bannerBlendColor text-sm leading-[22px] text-left"
+          >
+            Our mission at KoPPA is to connect fresh college graduates
+            participating in the NYSC scheme with reputable employers,
+            facilitating their transition into the professional workforce and
+            providing valuable opportunities for career growth and development.
           </p>
         </div>
         <div class="mt-7">
           <h2 class="text-blackColor text-xl md:text-2xl">Vision</h2>
-          <p class="mt-5 text-bannerBlendColor text-sm text-left">
-            venenatis nulla in pretium pulvinar. Nulla augue sit metus vulputate
-            id. Suspendisse id nisl vel vulputate arcu. Urna id lectus amet
-            venenatis dignissim ipsum dictum pretium integer. Scelerisque
-            phasellus dolor donec mi sem facilisi est risus. Proin sit mauris
-            sollicitudin pretium volutpat volutpat turpis.
+          <p
+            class="mt-5 text-bannerBlendColor text-sm leading-[22px] text-left"
+          >
+            Our vision at KoPPA is to be the leading platform that empowers
+            Nigerian youth by bridging the gap between education and employment,
+            ensuring a smooth transition from academia to the professional
+            world. We strive to create a dynamic ecosystem where talented
+            graduates can find meaningful one-year employment opportunities and
+            gain the necessary skills and experience to excel in their chosen
+            fields.
           </p>
         </div>
       </div>

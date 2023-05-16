@@ -15,22 +15,25 @@
           >
             {{ title }}
           </h2>
-          <p class="font-sans mt-10 px-1 md:mt-12 md:text-sm md:px-0 md:w-4/5">
+          <p class="font-sans mt-10 px-1 md:mt-12 md:text-lg md:px-0 md:w-4/5">
             {{ text }}
           </p>
           <h6 class="font-bold font-sans mt-5">Are you a Corper?</h6>
-          <p class="font-sans md:text-sm md:w-4/5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat..
+          <p class="font-sans md:text-base md:w-4/5">
+            KoPPA is the perfect platform for you to network with your dream
+            companies, and relevant work places to know tertiary education. We
+            sympathize with the continued misplacement corps members have faced
+            over the years during their service year and the need to utilize
+            that period gathering relevant experience. Use KoPPa to get the
+            perfect PPA today!
           </p>
           <h6 class="font-bold font-sans mt-5">Are you a Employer?</h6>
-          <p class="font-sans md:text-sm md:w-4/5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p class="font-sans md:text-base md:w-4/5">
+            Many graduates thus become unemployable and unfit for most work
+            places since their skills haven’t be rightly applied. We offer a
+            solution that uses machine learning to match the right candidates to
+            the right work place, and offer matching recommendations to hiring
+            teams. No one does it better.
           </p>
           <div
             class="btn mt-6 mb-20 flex justify-evenly md:justify-start md:gap-5 md:mt-16"

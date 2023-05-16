@@ -1,7 +1,6 @@
 export const states = [
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Lagos Ikeja`,
     state: "Lagos",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -9,8 +8,7 @@ export const states = [
     desktop: true,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Adamawa Yola`,
     state: "Adamawa",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -18,8 +16,7 @@ export const states = [
     desktop: true,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Rivers Portharcourt`,
     state: "Rivers",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -27,8 +24,7 @@ export const states = [
     desktop: false,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Oyo Ibadan`,
     state: "Oyo",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -36,8 +32,7 @@ export const states = [
     desktop: true,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `FCT Abuja`,
     state: "Abuja",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -45,8 +40,7 @@ export const states = [
     desktop: false,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Imo Owerri`,
     state: "Imo",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -54,8 +48,7 @@ export const states = [
     desktop: true,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Kaduna`,
     state: "Kaduna",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -63,8 +56,7 @@ export const states = [
     desktop: false,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Ondo Akure`,
     state: "Ondo",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -72,8 +64,7 @@ export const states = [
     desktop: true,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Enugu`,
     state: "Enugu",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
@@ -81,8 +72,7 @@ export const states = [
     desktop: false,
   },
   {
-    location: `Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-              magna risus.`,
+    location: `Kano`,
     state: "Kano",
     link: " https//www.osdhfsdhsdfdf/sfdjfhsdoif/dfj",
     number: "+234 809 987 4567",
