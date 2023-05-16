@@ -40,13 +40,12 @@
               <p class="">{{ post.duration }}</p>
             </div>
           </div>
+          <p class="font-sans font-normal mt-3 md:hidden">
+            {{ post.timePosted }}
+          </p>
         </div>
       </div>
     </div>
-
-    <p class="pl-14 font-sans font-normal mt-3 md:hidden">
-      {{ post.timePosted }}
-    </p>
   </div>
 </template>
 
