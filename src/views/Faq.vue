@@ -10,8 +10,7 @@
           <h2
             class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
           >
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            ?
+            What is KoPPA and how does it work? ?
           </h2>
           <p class="leading-6 text-sm">
             Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
@@ -26,8 +25,35 @@
           <h2
             class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
           >
+            Who can sign up on KoPPA?
+          </h2>
+          <p class="leading-6 text-sm">
             Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            ?
+            velit sagittis nisi elementum. Ultrices et potenti netus turpis
+            magna tincidunt. Habitasse pellentesque lobortis tortor adipiscing
+            euismod a. Viverra vehicula ullamcorper pretium egestas.
+          </p>
+        </div>
+        <div class="bg-white font-inter space-y-3 p-5 md:pt-9 md:pb-5 md:px-20">
+          <h2
+            class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
+          >
+            What is the NYSC scheme and how does it relate to KoPPA?
+          </h2>
+          <p class="leading-6 text-sm">
+            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
+            velit sagittis nisi elementum. Ultrices et potenti netus turpis
+            magna tincidunt. Habitasse pellentesque lobortis tortor adipiscing
+            euismod a. Viverra vehicula ullamcorper pretium egestas.
+          </p>
+        </div>
+        <div
+          class="bg-darkLightBlue font-inter space-y-3 p-5 md:pt-9 md:pb-5 md:px-20"
+        >
+          <h2
+            class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
+          >
+            Do job seekers need to have a college degree to join KoPPA?
           </h2>
           <p class="leading-6 text-sm">
             Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
@@ -56,38 +82,7 @@
           <h2
             class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
           >
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            ?
-          </h2>
-          <p class="leading-6 text-sm">
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            velit sagittis nisi elementum. Ultrices et potenti netus turpis
-            magna tincidunt. Habitasse pellentesque lobortis tortor adipiscing
-            euismod a. Viverra vehicula ullamcorper pretium egestas.
-          </p>
-        </div>
-        <div class="bg-white font-inter space-y-3 p-5 md:pt-9 md:pb-5 md:px-20">
-          <h2
-            class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
-          >
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            ?
-          </h2>
-          <p class="leading-6 text-sm">
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            velit sagittis nisi elementum. Ultrices et potenti netus turpis
-            magna tincidunt. Habitasse pellentesque lobortis tortor adipiscing
-            euismod a. Viverra vehicula ullamcorper pretium egestas.
-          </p>
-        </div>
-        <div
-          class="bg-darkLightBlue font-inter space-y-3 p-5 md:pt-9 md:pb-5 md:px-20"
-        >
-          <h2
-            class="text-bannerBlendColor font-semibold text-sm leading-[27px] text-left"
-          >
-            Lorem ipsum dolor sit amet consectetur. Sagittis est cras consequat
-            ?
+            Are the job listings on KoPPA specifically for one-year positions?
           </h2>
           <ol class="list-decimal pl-5 md:pl-10">
             <li class="leading-6 text-sm">

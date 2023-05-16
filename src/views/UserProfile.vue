@@ -7,7 +7,7 @@
       <div class="pt-14 pb-[7.5rem] md:w-2/3">
         <section>
           <div class="container px-[1.875rem] mt-[7.5rem] md:mt-0">
-            <ProfileHeader imgUrl="corperProfileDesktop" />
+            <ProfileHeader imgUrl="corperProfileDesktop" name="Edward" />
           </div>
         </section>
 
