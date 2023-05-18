@@ -7,7 +7,9 @@
       />
 
       <div class="relative">
-        <h1 class="mt-14 text-blackColor text-3xl">{{ user ? user : name }}</h1>
+        <h1 class="mt-14 text-blackColor text-3xl">
+          {{ user ? user : corper ? corper : name }}
+        </h1>
         <img
           src="../assets/icons/pen.png"
           alt=""
@@ -21,7 +23,9 @@
             alt=""
             class="w-5 h-6 object-contain"
           />
-          <small class="text-[0.625rem]">Lab Technicians</small>
+          <small class="text-[0.625rem]">{{
+            user ? "Software Company" : corper ? "DevOps Engineer" : ""
+          }}</small>
         </div>
         <div class="flex gap-1 items-center">
           <img
@@ -41,6 +45,9 @@ export default {
   props: ["imgUrl", "name"],
   computed: {
     user() {
+      return this.$store.getters.getCompanyUser;
+    },
+    corper() {
       return this.$store.getters.getUser;
     },
   },
