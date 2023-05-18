@@ -33,8 +33,7 @@
             class="w-5 h-5 object-contain"
           />
           <p class="text-bannerBlendColor font-inter text-xs md:text-sm ml-1">
-            Lorem ipsum dolor sit amet consectetur. Convallis lobortis purus
-            magna risus tempor sed.
+            33 admiral Street awolowo avenue Ibadan
           </p>
         </li>
         <li class="flex gap-5 mt-[10px] items-center">
@@ -158,6 +157,8 @@
         <div class="flex justify-end">
           <button
             class="bg-signUpCorperBtn w-36 text-white px-9 py-2 mt-3 rounded-[0.625rem]"
+            type="button"
+            @click="handleNotAvailableModalOpen"
           >
             Post
           </button>
@@ -165,10 +166,36 @@
       </form>
     </div>
   </div>
+  <div class="fixed">
+    <NotAvailableModal
+      v-if="notAvailable"
+      :closeModal="handleNotAvailableModalClose"
+    />
+    <div v-else></div>
+  </div>
 </template>
 
 <script>
+import { ref } from "vue";
+import NotAvailableModal from "./NotAvailableModal.vue";
 export default {
   name: "CompanyForm",
+  components: { NotAvailableModal },
+  setup() {
+    const notAvailable = ref(false);
+
+    const handleNotAvailableModalClose = () => {
+      notAvailable.value = false;
+    };
+    const handleNotAvailableModalOpen = () => {
+      notAvailable.value = true;
+    };
+
+    return {
+      handleNotAvailableModalClose,
+      handleNotAvailableModalOpen,
+      notAvailable,
+    };
+  },
 };
 </script>
