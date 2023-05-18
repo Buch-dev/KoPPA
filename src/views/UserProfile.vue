@@ -29,9 +29,9 @@
                 <ul
                   class="mt-5 pl-3 list-disc text-xs text-bannerBlendColor space-y-[0.625rem]"
                 >
-                  <li>University of Nigeria, Nsukka . BSC</li>
+                  <li>University of Nigeria, Nsukka . BSC Computer Science</li>
                   <li>Doyern Academy.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <!-- <li>Lorem ipsum dolor sit amet consectetur.</li> -->
                 </ul>
 
                 <div
@@ -46,8 +46,8 @@
                 <ul
                   class="mt-5 pl-3 list-disc text-xs text-bannerBlendColor space-y-[0.625rem]"
                 >
-                  <li>Robben Stores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Devops Engineer XoXo Tech.</li>
+                  <li>IT manager Robben Stores.</li>
                 </ul>
               </div>
 
@@ -68,9 +68,9 @@
                 <ul
                   class="mt-5 pl-3 list-disc text-xs text-bannerBlendColor space-y-[0.625rem]"
                 >
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>Automation.</li>
+                  <li>Software testing.</li>
+                  <li>System Integration.</li>
                 </ul>
 
                 <div

@@ -23,6 +23,17 @@
     >
       <form @submit.prevent="" class="mt-10 flex flex-col text-sm md:text-base">
         <div class="grid grid-cols-2 gap-[10px]">
+          <div class="flex flex-col mt-5">
+            <label for="firstname" class="mb-[10px] font-sans">firstName</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              v-model="firstname"
+              v-validate="'required'"
+              class="h-[50px] px-1 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor rounded-lg"
+            />
+          </div>
           <Input :data="data" v-for="(data, index) in inputData" :key="index" />
           <div class="flex flex-col">
             <label for="gender" class="font-sans mt-5">Gender</label>
@@ -84,8 +95,9 @@
           ></textarea>
         </div>
         <button
-          type="submit"
+          type="button"
           class="bg-signUpCorperBtn text-white mt-5 h-16 rounded-[10px] text-lg font-bold"
+          @click="() => goToAccount(firstname)"
         >
           SUBMIT
         </button>
@@ -95,82 +107,100 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useStore } from "vuex";
+import router from "@/router";
+
 import Input from "../components/Input.vue";
 export default {
   name: "CreateCorperAcct",
   components: { Input },
-  data() {
+  setup() {
+    const inputData = [
+      {
+        label: "Last name",
+        name: "lastname",
+        id: "lastname",
+        type: "text",
+        vmodel: "",
+      },
+      {
+        label: "Email",
+        name: "email",
+        id: "email",
+        type: "email",
+        vmodel: "",
+      },
+      {
+        label: "Phone number",
+        name: "tel",
+        id: "tel",
+        type: "tel",
+        vmodel: null,
+      },
+      {
+        label: "Date of Birth",
+        name: "dob",
+        id: "dob",
+        type: "date",
+        vmodel: null,
+      },
+    ];
+
+    const inputData2 = [
+      {
+        label: "Password",
+        name: "password",
+        id: "password",
+        type: "password",
+        vmodel: "",
+      },
+      {
+        label: "Confirm Password",
+        name: "confirm-password",
+        id: "confirm-password",
+        type: "password",
+        vmodel: "",
+      },
+      {
+        label: "Location",
+        name: "location",
+        id: "location",
+        type: "text",
+        vmodel: "",
+      },
+      {
+        label: "Address",
+        name: "address",
+        id: "address",
+        type: "text",
+        vmodel: "",
+      },
+    ];
+
+    const firstname = ref("");
+    const store = useStore();
+
+    const goBack = () => {
+      router.back();
+    };
+
+    const goToAccount = (payload) => {
+      if (firstname.value) {
+        store.dispatch("addUser", payload);
+        localStorage.setItem("koppa-token", "team-15-koppa-token");
+      }
+
+      router.push("/home");
+    };
+
     return {
-      inputData: [
-        {
-          label: "First name",
-          name: "firstname",
-          id: "firstname",
-          type: "text",
-          vmodel: "",
-        },
-        {
-          label: "Last name",
-          name: "lastname",
-          id: "lastname",
-          type: "text",
-          vmodel: "",
-        },
-        {
-          label: "Email",
-          name: "email",
-          id: "email",
-          type: "email",
-          vmodel: "",
-        },
-        {
-          label: "Phone number",
-          name: "tel",
-          id: "tel",
-          type: "tel",
-          vmodel: null,
-        },
-        {
-          label: "Date of Birth",
-          name: "dob",
-          id: "dob",
-          type: "date",
-          vmodel: null,
-        },
-      ],
-      inputData2: [
-        {
-          label: "Password",
-          name: "password",
-          id: "password",
-          type: "password",
-          vmodel: "",
-        },
-        {
-          label: "Confirm Password",
-          name: "confirm-password",
-          id: "confirm-password",
-          type: "password",
-          vmodel: "",
-        },
-        {
-          label: "Location",
-          name: "location",
-          id: "location",
-          type: "text",
-          vmodel: "",
-        },
-        {
-          label: "Address",
-          name: "address",
-          id: "address",
-          type: "text",
-          vmodel: "",
-        },
-      ],
+      inputData,
+      inputData2,
+      firstname,
+      goToAccount,
     };
   },
-  methods: {},
 };
 </script>
 

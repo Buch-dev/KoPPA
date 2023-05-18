@@ -101,17 +101,17 @@ export default {
 
     const goToAccount = (payload) => {
       console.log(props.pathName);
-      localStorage.setItem("koppa-token", "team-15-koppa-token");
-      if (props.pathName === "signin-corper") {
-        router.push("/company");
-        return;
-      }
-
       if (username.value) {
-        store.dispatch("addUser", payload);
-      }
+        localStorage.setItem("koppa-token", "team-15-koppa-token");
+        if (props.pathName === "signin-corper") {
+          store.dispatch("addCompanyUser", payload);
+          router.push("/company");
+          return;
+        }
 
-      router.push("/home");
+        store.dispatch("addUser", payload);
+        router.push("/home");
+      }
     };
 
     // const addUser = (payload) => {

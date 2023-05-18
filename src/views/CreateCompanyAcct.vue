@@ -29,6 +29,7 @@
 
       <form
         class="mt-6 p-5 bg-jobCardBackgroundColor text-companiesColor font-bold text-sm font-inter"
+        @submit.prevent="() => goToAccount(companyname)"
       >
         <h3
           class="text-center text-blackColor font-bold text-xl md:text-3xl mb-6"
@@ -42,6 +43,7 @@
               type="text"
               id="companyname"
               class="w-full rounded-[0.625rem] border-[0.5px] border-opacity-25 border-solid border-jobListingsBorderColor px-3 py-3 text-base font-normal block focus:border-signUpCorperBtn"
+              v-model="companyname"
             />
           </div>
           <div class="space-y-2">
@@ -91,6 +93,9 @@
 
 <script>
 import router from "@/router";
+import { ref } from "vue";
+import { useStore } from "vuex";
+
 export default {
   name: "CreateCompanyAcct",
   setup() {
@@ -98,7 +103,19 @@ export default {
       router.back();
     };
 
-    return { goBack };
+    const companyname = ref("");
+    const store = useStore();
+
+    const goToAccount = (payload) => {
+      if (companyname.value) {
+        store.dispatch("addCompanyUser", payload);
+        localStorage.setItem("koppa-token", "team-15-koppa-token");
+      }
+
+      router.push("/company");
+    };
+
+    return { goBack, goToAccount, companyname };
   },
 };
 </script>
