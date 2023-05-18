@@ -62,6 +62,7 @@
       >
         <button
           class="bg-jobListingsApplyBtnColor text-white text-xs uppercase py-1 rounded-md md:bg-signUpCorperBtn px-4 md:rounded-[10px] md:text-base md:px-6 md:py-2"
+          @click="handleNotAvailableModalOpen"
         >
           Apply
         </button>
@@ -84,11 +85,36 @@
       </div>
     </div>
   </div>
+  <NotAvailableModal
+    v-if="notAvailable"
+    :closeModal="handleNotAvailableModalClose"
+  />
+  <div v-else></div>
 </template>
 
 <script>
+import { ref } from "vue";
+
+import NotAvailableModal from "./NotAvailableModal.vue";
 export default {
   name: "JobListingsCard",
   props: ["post"],
+  components: { NotAvailableModal },
+  setup() {
+    const notAvailable = ref(false);
+
+    const handleNotAvailableModalClose = () => {
+      notAvailable.value = false;
+    };
+    const handleNotAvailableModalOpen = () => {
+      notAvailable.value = true;
+    };
+
+    return {
+      notAvailable,
+      handleNotAvailableModalClose,
+      handleNotAvailableModalOpen,
+    };
+  },
 };
 </script>
