@@ -15,76 +15,103 @@
         v-for="(company, index) in CompaniesData"
         :key="index"
       />
+      <button
+        class="flex justify-center items-center"
+        @click="handleNotAvailableModalOpen"
+      >
+        <img
+          src="../assets/img/put-company.svg"
+          alt="drag and drop"
+          class="-mt-16"
+        />
+      </button>
     </div>
+  </div>
+  <div>
+    <NotAvailableModal
+      v-if="notAvailable"
+      :closeModal="handleNotAvailableModalClose"
+    />
+    <div v-else></div>
   </div>
 </template>
 
 <script>
 import CompaniesComponent from "@/components/CompaniesComponent.vue";
+import NotAvailableModal from "./NotAvailableModal.vue";
 export default {
   name: "Companies",
-  components: { CompaniesComponent },
+  components: { CompaniesComponent, NotAvailableModal },
   data() {
     return {
       CompaniesData: [
         {
-          logo: "arike-farm-mobile",
+          logo: "arike-farm-mobile.png",
           name: "Arike Farm",
           field: "Agricultural Enterprise",
           followers: "20k followers",
           mobile: true,
         },
         {
-          logo: "unilever-mobile",
+          logo: "koppa-unilever.svg",
           name: "Unilever",
           field: "Private Hospital in Lagos",
           followers: "17k followers",
           mobile: true,
         },
         {
-          logo: "real-estate-mobile",
+          logo: "real-estate-mobile.png",
           name: "Rise Real Estate",
           field: "Hospitality/Management",
           followers: "18.5k followers",
           mobile: true,
         },
         {
-          logo: "williams",
+          logo: "williams.png",
           name: "TT Williams Chambers",
           field: "Attorneys at Law",
           followers: "19.3k followers",
           mobile: false,
         },
         {
-          logo: "MTN-mobile",
+          logo: "koppa-mtn.svg",
           name: "MTN",
           field: "Telecommunication",
           followers: "25.75k followers",
           mobile: true,
         },
         {
-          logo: "GTCO-mobile",
+          logo: "koppa-gt.svg",
           name: "GT Bank",
           field: "Accounting/Economics",
           followers: "25k followers",
           mobile: true,
         },
         {
-          logo: "high-life",
+          logo: "high-life.png",
           name: "High-Life Interiors",
           field: "Hospitality/Management",
           followers: "20.5k followers",
           mobile: false,
         },
-        {
-          logo: "drag-img-mobile",
-          name: null,
-          field: null,
-          followers: null,
-          mobile: true,
-        },
+        // {
+        //   logo: "put-company.svg",
+        //   name: null,
+        //   field: null,
+        //   followers: null,
+        //   mobile: true,
+        // },
       ],
+      notAvailable: false,
     };
+  },
+  methods: {
+    handleNotAvailableModalClose() {
+      this.notAvailable = false;
+    },
+    handleNotAvailableModalOpen() {
+      this.notAvailable = true;
+    },
   },
 };
 </script>
