@@ -17,7 +17,7 @@
           type="search"
           name=""
           id="search"
-          class="w-[400px] h-[50px] rounded-[100px] pl-11 pr-5 py-6 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-jobCardBackgroundColor"
+          class="w-[400px] h-[50px] rounded-[100px] pl-11 pr-5 py-6 border border-gray-400 focus:outline-none focus:border-signUpCorperBtn transition-all duration-500 ease-in-out bg-transparent"
         />
         <img
           src="../assets/icons/search-line.png"
@@ -36,7 +36,7 @@
       /> -->
       <router-link :to="{ name: 'signin-corper' }">
         <button
-          class="md:block rounded-[0.625rem] border border-signUpCorperBtn text-signUpCorperBtn py-2 px-6 xl:py-5 xl:px-6 text-sm xl:text-lg"
+          class="md:block rounded-[0.625rem] border border-white text-white py-2 px-6 xl:py-5 xl:px-6 text-sm xl:text-lg"
         >
           SIGN IN
         </button>

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Nav />
+    <!-- <Nav /> -->
     <HomeBanner />
     <LatestJobs />
     <Empowering />
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Nav from "@/components/Nav.vue";
+// import Nav from "@/components/Nav.vue";
 import HomeBanner from "@/components/HomeBanner.vue";
 import LatestJobs from "@/components/LatestJobs.vue";
 import Empowering from "@/components/Empowering.vue";
@@ -26,7 +26,7 @@ import ContactUs from "@/components/ContactUs.vue";
 export default {
   name: "HomeView",
   components: {
-    Nav,
+    // Nav,
     HomeBanner,
     LatestJobs,
     Empowering,

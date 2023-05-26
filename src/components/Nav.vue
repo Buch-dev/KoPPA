@@ -41,15 +41,21 @@
         />
         <ul
           v-if="signedIn || token"
-          class="hidden md:flex gap-10 items-center text-sm xl:text-base"
+          class="hidden md:flex gap-10 items-center text-white text-sm xl:text-base"
         >
           <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
-            <router-link :to="{ name: 'JobListings' }" class="whitespace-nowrap"
+            <router-link
+              :to="{ name: 'JobListings' }"
+              class="whitespace-nowrap hover:text-signUpCorperBtn transition-colors duration-500"
               >Job Listing</router-link
             >
           </li>
           <li :class="$route.path === '/company' ? 'hidden' : 'inline-block'">
-            <router-link :to="{ name: 'Resources' }">Resource</router-link>
+            <router-link
+              :to="{ name: 'Resources' }"
+              class="whitespace-nowrap hover:text-signUpCorperBtn transition-colors duration-500"
+              >Resource</router-link
+            >
           </li>
           <li>
             <button @click="handleModalOpen">

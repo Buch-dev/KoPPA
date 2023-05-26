@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <Navigation />
+    <!-- <Navigation /> -->
     <Banner />
     <LatestJobs />
     <Empowering />
@@ -16,7 +16,7 @@
 
 <script>
 // @ is an alias to /src
-import Navigation from "@/components/Navigation.vue";
+// import Navigation from "@/components/Navigation.vue";
 import Banner from "@/components/Banner.vue";
 import LatestJobs from "@/components/LatestJobs.vue";
 import Empowering from "@/components/Empowering.vue";
@@ -27,7 +27,7 @@ import ContactUs from "@/components/ContactUs.vue";
 export default {
   name: "LandingPage",
   components: {
-    Navigation,
+    // Navigation,
     Banner,
     LatestJobs,
     Empowering,
