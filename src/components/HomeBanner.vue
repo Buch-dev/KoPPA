@@ -1,14 +1,14 @@
 <template>
   <div
-    class="banner bg-cover bg-center bg-no-repeat bg-[url('../assets/img/koppa-bg.png')]"
+    class="banner bg-cover bg-center bg-no-repeat bg-[url('../assets/img/koppa-bg.png')] max-h-[670px]"
   >
     <Nav />
     <div
       class="container text-center flex justify-center items-center md:text-left"
     >
-      <div class="banner-text text-center pb-16 pt-56">
+      <div class="banner-text text-center pb-8 pt-20 md:pb-16 md:pt-56">
         <h2
-          class="text-3xl font-bold mt-52 text-white px-2 md:text-signUpCorperBtn md:mt-0 md:text-6xl md:px-0"
+          class="text-3xl font-bold mt-10 text-white px-2 md:text-signUpCorperBtn md:mt-0 md:text-6xl md:px-0"
         >
           <span v-if="user">Hi {{ user }}</span> <span v-else>{{ title }}</span>
         </h2>
@@ -23,7 +23,7 @@
           {{ text2 }}
         </p>
         <div
-          class="btns flex justify-evenly gap-2 mt-36 mb-20 md:justify-center md:gap-6 md:mt-16 md:mb-0"
+          class="btns flex justify-evenly gap-2 mb-20 md:justify-center md:gap-6 mt-16 md:mb-0"
         >
           <button
             class="bg-signUpCorperBtn text-white rounded-xl py-6 px-7 font-semibold font-sans w-40 md:py-4 md:font-medium md:text-sm md:px-1"
