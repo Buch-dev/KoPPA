@@ -1,6 +1,6 @@
 <template>
   <div
-    class="banner bg-cover bg-center bg-no-repeat bg-[url('../assets/img/koppa-bg.png')] max-h-[670px]"
+    class="banner bg-cover bg-center bg-no-repeat bg-[url('../assets/img/koppa-bg.png')] max-h-[690px]"
   >
     <Nav />
     <div
